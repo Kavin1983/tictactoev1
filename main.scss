@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Raleway";
+}
+
+// VARIABLES
+
+$color-green-dark: rgb(36, 207, 79);
+$color-green-darker: rgb(40, 133, 48);
+$color-grey: rgb(233, 231, 231);
+$color-black: rgb(41, 41, 41);
+$color-black-dark: rgb(20, 20, 20);
+$color-green: rgb(4, 252, 24);
+$color-blue: rgb(24, 29, 80);
+$color-blue-dark: rgb(10, 12, 31);
+// END VARIABLES
+main {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: $color-blue;
+  padding: 3rem 4rem;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 1.2rem;
+}
+
+.settingsbar {
+  background-color: $color-grey;
+  width: 100%;
+  padding: 2rem 5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.newGame {
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  background-color: $color-blue;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 4px;
+}
+
+.winning-message,
+.turn,
+.scores {
+  font-size: 2rem;
+  background-color: $color-blue;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+}
+
+.x-score {
+  letter-spacing: 1rem;
+  margin-right: 1rem;
+}
+
+.o-score {
+  letter-spacing: 1rem;
+  margin-left: 1rem;
+}
+
+.scores {
+}
+
+.reset {
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.7);
+  font-size: 4rem;
+  background-color: #fff;
+  padding: 1.5rem 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: all 3s;
+  border: 1rem solid rgba(0, 0, 0, 0.85);
+}
+
+.down {
+  transform: translate(100%);
+}
+
+.none {
+  display: none;
+  opacity: 0;
+}
+
+.board {
+  width: 60rem;
+  height: 60rem;
+  background-color: $color-grey;
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    flex: 1;
+    display: flex;
+  }
+
+  &__box {
+    transition: all 0.4s;
+    margin: 1rem;
+    flex: 1;
+    background-color: $color-black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__check {
+    color: #fff;
+    font-size: 8rem;
+  }
+}
+
+.green {
+  background-color: $color-green;
+}
+
+.footer {
+  background-color: $color-blue;
+  color: white;
+  padding: 6rem 10rem;
+  margin-top: 10rem;
+  border-top: 3px solid black;
+
+  & p {
+    border-bottom: 2px solid rgb(209, 205, 205);
+    padding-bottom: 3px;
+  }
+
+  &-icon {
+    fill: white;
+    box-shadow: 0.5rem 0.5rem rgba(255, 255, 255, 0.6);
+    border-radius: 100%;
+    background-color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    transition: all 0.3s;
+    margin-top: 1rem;
+
+    &:active {
+      transform: translate(3px, 3px);
+      box-shadow: 0.1rem 0.1rem rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.made-by div,
+.other-projects div {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.copyright p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
